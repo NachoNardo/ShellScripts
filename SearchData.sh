@@ -1,14 +1,14 @@
 banner "User Search"
 
 echo "*********************Start Search Operation*********************"
-echo "Please, enter file/folder name you want to search: - "
-read search_data
+printf "Please, enter file/folder name you want to search: - "
+read file_or_folder_data
 
 echo "Starting search Operation :--------"
 
-locate $search_data > SearchResult.txt
+locate $file_or_folder_data > ${file_or_folder_data}.txt
 echo "New research file generated in this location ---------"
 pwd 
 
-echo "File name is: - "
-echo SearchResult.txt
+printf "File name is: - $file_or_folder_data.location.txt"
+echo " "
